@@ -1,0 +1,97 @@
+*{
+	margin: 0;
+	padding: 0;
+	box-sizing: border-box;
+	font-family: arial, sans-serif;
+}
+
+.login:after, .login:before {
+  content:' ';
+  position: absolute;
+  width:100%;
+  height:50%;
+  z-index: -1;
+}
+
+.login:after {top: 0px; background-image: linear-gradient(180deg, #2a00e9 0%, #c24fd6 100%); }
+.login:before {bottom: 0px; background: whitesmoke;}
+
+.login .title{
+	border: 2px solid red;
+	text-align: center;
+	width: 60%;
+	margin: auto;
+	/*padding-top: 5rem;*/
+}
+.login .logo{
+	/*border: 2px solid red;*/
+	display: block;
+	margin-left: auto;
+	margin-right: auto;
+	width: 50%;
+	margin-top: 4rem;
+}
+.login .logo h2{
+	margin-left: 1rem;
+	color: white;
+}
+
+.login .login-box{
+	/*border: 2px solid red;*/
+	width: 80%;
+	height: 40vh;
+	margin: auto;
+	margin-top: 6rem;
+	background-color: #fff;
+	border-radius: 20px;
+    box-shadow: 0px 8px 16px -1px rgba(181,181,181,1);
+}
+.login .login-box h2{
+	text-align: center;
+	padding-top: 0.5rem;
+	/*border: 2px solid red;*/
+}
+.login .login-box .login-fields{
+	/*border: 1px solid red;*/
+	height: 68%;
+	padding-left: 1rem ;
+	padding-right: 1rem ;
+}
+.login .login-box .login-fields .fieldt{
+	width: 100%;
+}
+.login .login-box .login-fields .fieldl{
+	font-size: 1.3rem;
+}
+.login .login-box .login-fields .field{
+	margin-top: 1.2rem;
+	/*border: 2px solid red;*/
+}
+.login .login-box input{
+	border: none;
+    border-bottom: 2px solid black;
+	margin-top: 0.2rem;
+	outline: none;
+    font-size: 1.3rem;
+}
+.login .login-box input:selected{
+	border-bottom: 2px solid red;
+}
+.login .login-box .login-btn{
+	width: 70%;
+	display: block;
+	margin-left: auto;
+	margin-right: auto;
+	border-radius: 20px;
+	background-color: #2a00e9;
+	color: white;
+	font-weight: bolder;
+	font-size: 1.3rem;
+	height: 3rem;
+    box-shadow: 0px 8px 16px -1px rgba(181,181,181,1);
+    border: none;
+}
+.login .links{
+	text-align: center;
+	margin-top: 2.5rem;
+}
