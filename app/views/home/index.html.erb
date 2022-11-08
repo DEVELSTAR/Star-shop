@@ -1,5 +1,46 @@
 <div class="home">
-  <marquee class="homeh1">Welcome To Iqbal Telecom</marquee>
-  <h1>In Process</h1>
-  <div><%= button_to "Sign Out", destroy_user_session_path, method: :delete, class: "btn" %></div>
+	<div class="marquee">
+		<h1>Welcome to Iqbal Telecom
+			(<%= link_to "Sign Out", destroy_user_session_path, data: {turbo_method: :delete}, class: "sign-out-btn" %>)
+		</h1>
+      
+	</div>
+  <div class="home-intro">
+  	<div class="mobile-img">
+  		<%= image_tag "home-mobile2", class: "home-mobile2-img" %>
+    </div>
+  	<div class="mobile-content">
+  		<h1>Iqbal Telecom</h1>
+  		<h2>At Its Best</h2>
+	    <div class="home-btns">
+	      <button class="home-btn-buy">Buy New Phone</button>
+	  	  <button class="home-btn-sell">Sell Old Phone</button>
+	  	  <button class="home-btn-repair">Repair</button>
+	    </div>
+  	</div>
+  </div>
+  <div class="contact-us">
+      <div class="contact-cont">
+      	<div class="details">
+      	  <h1>Contact Us Now</h1>
+          <h2>Owner: Iqbal Ahmad</h2>
+          <h2>Phone no: 9837863096</h2>
+          <h2>Phone no: 9719422422</h2>
+          <h2>Address: Shamshi Market near Ghanta Ghar, Sadar Bajar, Bijnor, Uttar Pradesh 246701</h2>
+      	</div>
+        
+        <div class="social-media">
+          <h1>Our Social Media</h1>
+          <div>
+					  <i class="fa-brands fa-whatsapp"></i>
+					  <i class="fa-brands fa-facebook"></i>
+					  <i class="fa-brands fa-instagram"></i>
+					  <i class="fa-brands fa-youtube"></i>
+					</div>
+        </div>
+      </div>
+      <div class="contact-map">
+				<iframe src="https://www.google.com/maps/embed?pb=!1m14!1m8!1m3!1d13907.942392237526!2d78.1338754!3d29.3707109!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x390befd33939d107%3A0x2c13fe4932cc3dab!2sIqbal%20Telecom!5e0!3m2!1sen!2sin!4v1667904861106!5m2!1sen!2sin" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
+      </div>
+	</div>
 </div>
