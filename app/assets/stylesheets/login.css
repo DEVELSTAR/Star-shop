@@ -39,7 +39,7 @@
 }
 
 .login .login-box{
-	border: 2px solid red;
+	border: 2px solid white;
 	width: 80%;
 	/*height: 40vh;*/
 	margin: auto;
@@ -85,7 +85,7 @@
 	margin-left: auto;
 	margin-right: auto;
 	margin-top: 30px;
-	margin-bottom: -25px;
+	margin-bottom: -23px;
 	border-radius: 20px;
 	background-color: #2a00e9;
 	color: white;
@@ -99,7 +99,7 @@
 	text-align: center;
 	margin-top: 2.5rem;
 }
-@media only screen and (max-height: 700px) {
+@media only screen and (max-height: 720px) {
 	.login .logos{
 		margin-top: 0;
 		width: 150px;
