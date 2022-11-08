@@ -1,5 +1,5 @@
 <div class="login">
-  <div class="logo"><%= image_tag "logo.png", class: "logo" %>
+  <div class="logos"><%= image_tag "logo.png", class: "logo" %>
     <h2>Iqbal Telecom</h2>
   </div>
   
@@ -23,11 +23,11 @@
             <%= f.label :remember_me %>
           </div>
         <% end %>
-    </div>
         <div class="actions">
           <%= f.submit "Log in" ,class: "login-btn" %>
         </div>
       <% end %>
+    </div>
   </div>
   <div class="links"><%= render "devise/shared/links" %></div>
 </div>
