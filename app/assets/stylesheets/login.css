@@ -101,6 +101,27 @@
 }
 @media only screen and (max-height: 800px) {
 	.login .logos{
+		margin-top: 3rem;
+		width: 180px;
+	}
+	.login .logo{
+		margin-top: 0;
+		width: 180px;
+	}
+	.login .logos h2{
+		margin-top: 0;
+		font-size: 25px;
+	}
+
+	.login .login-box{
+		margin-top: 2rem;
+	}
+	.login .login-box .login-btn{
+		margin-top: 1rem;
+	}
+}
+@media only screen and (max-height: 700px) {
+	.login .logos{
 		margin-top: 0;
 		width: 150px;
 	}
