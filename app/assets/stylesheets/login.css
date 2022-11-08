@@ -99,7 +99,7 @@
 	text-align: center;
 	margin-top: 2.5rem;
 }
-@media only screen and (max-height: 720px) {
+@media only screen and (max-height: 800px) {
 	.login .logos{
 		margin-top: 0;
 		width: 150px;
