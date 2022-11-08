@@ -1,0 +1,31 @@
+.home{
+	background-color: white;
+	height: 100vh;
+}
+.homeh1{
+	color: black;
+	font-size: 50px;
+}
+.home h1{
+	text-align: center;
+	/*border: 2px solid red;*/
+	margin-top: 20%;
+}
+.btn{
+	color: white;
+	font-weight: bolder;
+	border-radius: 15px;
+	border: none;
+	padding: 10px;
+	background-color: green;
+	text-align: center;
+	font-size: 20px;
+	margin-top: 10px;
+}
+.home .btn:hover{
+	background-color: red;
+	font-size: 22px;
+}
+.home div{
+	text-align: center;
+}
