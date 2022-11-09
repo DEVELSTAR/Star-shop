@@ -13,9 +13,9 @@
   		<h1>Iqbal Telecom</h1>
   		<h2>At Its Best</h2>
 	    <div class="home-btns">
-	      <button class="home-btn-buy">Buy New Phone</button>
-	  	  <button class="home-btn-sell">Sell Old Phone</button>
-	  	  <button class="home-btn-repair">Repair</button>
+	      <%= link_to "Buy Old Phone", buyms_path, class: "home-btn" %>
+	      <%= link_to "Sell Old Phone", buyms_path, class: "home-btn" %>
+	      <%= link_to "Repair", buyms_path, class: "home-btn" %>
 	    </div>
   	</div>
   </div>

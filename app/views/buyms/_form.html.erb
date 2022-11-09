@@ -1,0 +1,12 @@
+<%= form_with model: @buym do |form| %>
+  <strong>Title:</strong> <%= form.text_field :title %><br>
+  <strong>Brand:</strong> <%= form.text_field :brand %><br>
+  <strong>Price:</strong> <%= form.number_field :price %><br>
+  <strong>Ram:</strong> <%= form.text_field :ram %><br>
+  <strong>Storage:</strong> <%= form.text_field :storage %><br>
+  <strong>Delivery:</strong> <%= form.text_field :delivery %><br>
+  <strong>Description:</strong> <%= form.text_area :description %><br>
+  <%= form.hidden_field :user_id, :value => current_user.id %>
+  <%= form.submit %>
+<% end %>
+

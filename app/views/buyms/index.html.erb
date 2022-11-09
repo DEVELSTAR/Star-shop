@@ -1,0 +1,5 @@
+<div class="buy-index">
+<% @buyms.each do |buy| %>
+<h1><%= link_to buy.title, buym_path(buy) %></h1>
+<% end %>
+<%= link_to "new", new_buym_path %>

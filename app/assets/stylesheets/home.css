@@ -57,7 +57,7 @@
 	display: flex;
 	justify-content: space-evenly;
 }
-.home-btns button{
+.home-btns .home-btn{
 	/*border: 3px solid black;*/
 	border-radius: 15px;
 	padding: 10px;
@@ -66,8 +66,9 @@
 	background-color: black;
 	border: none;
 	transition: color 1s;
+	text-decoration: none;
 }
-.home-btns button:hover{
+.home-btns .home-btn:hover{
 	/*background-color: yellow;*/
 	color: yellow;
 }
@@ -159,7 +160,7 @@
     .mobile-content h2{
 		font-size: 25px;
 	}
-	.home-btns button{
+	.home-btns .home-btn{
 		font-size: 10px;
 		padding: 6px;
 		margin-bottom: 10px;
