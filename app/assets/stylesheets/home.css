@@ -102,6 +102,13 @@
 .contact-cont h1{
 	margin-bottom: 2rem;
 }
+.contact-cont .nums{
+	display: flex;
+	font-size: 28px;
+}
+.contact-cont .nums .num{
+	color: red;
+}
 .contact-map{
 	width: 50%;
 }
@@ -187,7 +194,22 @@
 		margin: auto;
 		/*border: 2px solid red;*/
 		margin-top: 40px;
+		/*line-height: 1rem;*/
 	}
+
+	.contact-cont .nums{
+		margin-top: -5px;
+		margin-bottom: 2px;
+	  display: flex;
+	  font-size: 20px;
+	  /*border: 2px solid red;*/
+  }
+  .contact-cont .details h3{
+  	font-size: 20px;
+  }
+  .contact-cont .details h2{
+  	font-size: 20px;
+  }
 	.contact-cont .details h1{
 		/*border: 2px solid red;*/
 		margin-bottom: 1rem;
