@@ -1,5 +1,31 @@
 <div class="buy-index">
-<% @buyms.each do |buy| %>
-<h1><%= link_to buy.title, buym_path(buy) %></h1>
-<% end %>
-<%= link_to "new", new_buym_path %>
+  <div class="buy-home-links">
+    <%=link_to 'IQBAL TELECOM', root_path, class: "buy-home-link" %>
+  </div>
+  <div class="row row-cols-1 row-cols-md-2 g-4 buy-mobile">
+  	<% @buyms.each do |buy| %>
+  	  <div class="col buy-col">
+  	    <div class="card buy-card">
+  		    <div class="card-img">
+            <%#= image_tag "home-mobile2", class: "home-mobile2-img" %>
+          </div>
+          <div class="card-cont">
+      	  	<div class="card-titles">
+              <%= link_to buy.title, buym_path(buy), class: "card-title" %> 
+      	  	  <%= buy.brand %>,
+      	  	  <%= buy.ram %>,
+      	  	  <%= buy.storage %>
+            </div>
+            <div>
+      	  	  <h1 class="card-price">Rs. <%= buy.price %>.00</h1>
+            </div>
+            <div class="card-btns">
+              <%= link_to "Add To Cart", buym_path(buy), class: "card-cart-btn" %>
+        	    <%= link_to "Buy now", buym_path(buy), class: "card-buy-btn" %>
+            </div>
+          </div>
+        </div>
+      </div>
+	  <% end %>
+  </div>
+</div>

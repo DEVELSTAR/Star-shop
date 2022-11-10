@@ -1,0 +1,148 @@
+.buy-index{
+	/*border: 5px solid red;*/
+}
+.buy-home-links{
+	/*border: 2px solid red;*/
+	text-align: center;
+}
+.buy-home-link{
+	text-decoration: none;
+	color: black;
+	font-size: 40px;
+	font-weight: bolder;
+}
+.buy-index .buy-mobile{
+	border: 5px solid black;
+	margin: auto;
+	width: 90%;
+	/*height: 80%;*/
+	display: flex;
+	margin-top: 3rem;
+}
+.buy-mobile .buy-card{
+	border: 3px solid black;
+	width: 500px;
+	height: 800px;
+	margin: auto;
+	text-align: center;
+	background-color: ghostwhite;
+	background-color: #e0e0e0;
+}
+.buy-mobile .buy-card .card-img{
+	width: 70%;
+	height: 550px;
+	background-color: springgreen;
+	margin: auto;
+	margin-top: 5%;
+	background-image: url(https://images.unsplash.com/photo-1589492477829-5e65395b66cc?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxzZWFyY2h8MTV8fG1vYmlsZSUyMHBob25lfGVufDB8fDB8fA%3D%3D&auto=format);
+	background-repeat: no-repeat;
+	background-position: center;
+	background-size: cover;
+}
+.buy-mobile .buy-card .card-cont{
+	/*border: 2px solid red;*/
+	/*width: 70%;*/
+	margin: auto;
+	font-size: 20px;
+	line-height: 2rem;
+}
+.buy-mobile .buy-card .card-titles{
+	/*border: 2px solid red;*/
+	text-decoration: none;
+	margin-bottom: 5px;
+	padding: 0px 20px 0px 20px;
+
+}
+.buy-mobile .buy-card .card-title{
+	/*border: 2px solid red;*/
+	text-decoration: none;
+	color: black;
+}
+.buy-mobile .buy-card .card-btns{
+	/*border: 2px solid red;*/
+	height: 60px;
+}
+.buy-mobile .buy-card .card-cart-btn{
+	border: 2px solid black;
+	padding: 10px 50px 10px 50px;
+	text-decoration: none;
+	border-radius: 8px;
+	color: black;
+	font-weight: bolder;
+}
+.buy-mobile .buy-card .card-price{
+	/*border: 2px solid black;*/
+	font-size: 30px;
+	font-weight: bolder;
+	margin-bottom: 15px;
+}
+.buy-mobile .buy-card .card-buy-btn{
+	border: 2px solid black;
+	padding-left: 60px;
+	padding-right: 60px;
+	padding-top: 10px;
+	padding-bottom: 10px;
+	text-decoration: none;
+	border-radius: 8px;
+	color: white;
+	font-weight: bolder;
+	background-color: black;
+}
+
+
+@media only screen and (max-width: 480px) {
+	.buy-index{
+		width: 100%;
+		border: 4px solid black;
+	}
+	.buy-home-links{
+		padding-top: 15px;
+	}
+	.buy-home-link{
+		font-size: 20px;
+	}
+	.buy-index .buy-mobile{
+		border: none;
+		width: 100%;
+		margin-top: 0px;
+		padding: 0;
+		padding-bottom: 20px;
+	}
+	.buy-col{
+		width: 100%;
+		border: none;
+		height: 100%;
+	}
+	.buy-mobile .buy-card{
+		width: 100%;
+		height: 60%;
+		border: 2px solid black ;
+		padding-bottom: 0;
+	}
+	.buy-mobile .buy-card .card-img{
+		/*border: 2px solid green;*/
+		margin: 0;
+		width: 90%;
+		margin: auto;
+		margin-top: 10px;
+		height: 250px;
+		background-position: center;
+		margin-bottom: 10px;
+	}
+	.buy-mobile .buy-card .card-cont{
+		font-size: 15px;
+		line-height: 18px;
+    }
+	.card-btns{
+	}
+	.buy-mobile .buy-card .card-price{
+		font-size: 20px;
+		margin-bottom: 30px;
+		margin-top: 15px;
+	}
+
+	.card-cart-btn{
+		display: none;
+	}
+
+}
