@@ -1,25 +1,28 @@
 .buy-index{
-	/*border: 5px solid red;*/
+	border: 5px solid black;
+	/*height: 100vh;*/
 }
 .buy-home-links{
 	text-align: center;
 	background-color: black;
+	height: 70px;
+	padding-top: 5px;
 }
 .buy-home-link{
 	text-decoration: none;
 	color: white;
 	font-size: 40px;
 	font-weight: bolder;
-    padding-top: 20%;
 	background-color: black;
+	padding: 0;
 }
 .buy-index .buy-mobile{
-	border: 5px solid black;
+	/*border: 5px solid black;*/
 	margin: auto;
 	width: 90%;
 	/*height: 80%;*/
 	display: flex;
-	margin-top: 3rem;
+	margin-top: 2rem;
 }
 .buy-mobile .buy-card{
 	border: 3px solid black;
@@ -95,10 +98,11 @@
 @media only screen and (max-width: 480px) {
 	.buy-index{
 		width: 100%;
-		border: 4px solid black;
+		border: 5px solid black;
 	}
 	.buy-home-links{
-		padding-top: 15px;
+		padding-top: 7px;
+		height: 50px;
 	}
 	.buy-home-link{
 		font-size: 20px;
