@@ -1,4 +1,38 @@
-<%= @buym.title %>
-<%= link_to "delete", buym_path(@buym), data: {turbo_method: :delete}  %>
-<%= link_to "edit", edit_buym_path(@buym) %>
+<%#= @buym.title %>
+<%#= link_to "delete", buym_path(@buym), data: {turbo_method: :delete}  %>
+<%#= link_to "edit", edit_buym_path(@buym) %>
 
+
+
+<div class="buym-show">
+	<div class="buy-home-links">
+      <%=link_to 'IQBAL TELECOM', root_path, class: "buy-home-link" %>
+	</div>
+	<div class="buym-show-mobile">
+		<div class="show-mobile-img"></div>
+		<div class="show-cont">
+			<div>
+				<div class="mobile-title"><%= @buym.title %></div>
+				<div class="show-cont-price"><strong>Rs: </strong><%= @buym.price %>.00</div>
+				<div class="show-cont-box">
+					<div><strong>Brand: </strong><%= @buym.brand %></div>
+					<div><strong>Ram: </strong><%= @buym.ram %></div>
+					<div><strong>Storage: </strong><%= @buym.storage %></div>
+				</div>
+				<div class="show-cont-desc">
+					<strong>Description: </strong>
+					<p>
+					What is Lorem Ipsum?
+					Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book.
+					</p>
+				</div>
+				<div class="show-cont-delivery"><strong>Free</strong> delivery available till <%= @buym.delivery.capitalize %></div>
+
+			</div>
+            <div class="show-btns">
+              <%= link_to "Add To Cart", buym_path(@buym), class: "show-cart-btn" %>
+        	  <%= link_to "Buy now", buym_path(@buym), class: "show-buy-btn" %>
+            </div>
+		</div>
+	</div>
+</div>

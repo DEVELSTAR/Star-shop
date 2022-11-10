@@ -2,14 +2,16 @@
 	/*border: 5px solid red;*/
 }
 .buy-home-links{
-	/*border: 2px solid red;*/
 	text-align: center;
+	background-color: black;
 }
 .buy-home-link{
 	text-decoration: none;
-	color: black;
+	color: white;
 	font-size: 40px;
 	font-weight: bolder;
+    padding-top: 20%;
+	background-color: black;
 }
 .buy-index .buy-mobile{
 	border: 5px solid black;
