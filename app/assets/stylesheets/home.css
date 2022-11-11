@@ -144,8 +144,8 @@
 	}
 	.home-intro{
 		flex-direction: column;
-		height: 72%;
-		border: 2px solid red;
+		height: 71%;
+/*		border: 2px solid red;*/
 		margin-top: 15%;
 	}
 	.mobile-img{
