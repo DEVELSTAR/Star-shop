@@ -32,7 +32,7 @@
   border-right: none;
 	text-align: center;
 	width: 50%;
-	padding-top: 15%;
+	padding-top: 10%;
 }
 .mobile-content h1{
 	/*border: 2px solid red;*/
@@ -70,7 +70,6 @@
 	display: flex;
 	color: white;
 	border-radius: 15px;
-/*	width: 200px;*/
 	font-size: 20px;
 }
 .home-btns h3{
@@ -150,25 +149,28 @@
 	}
 	.home-intro{
 		flex-direction: column;
-		height: 71%;
-		margin-top: 15%;
-/*		border: 2px solid red;*/
+		height: 75%;
+		margin-top: 10%;
 		margin-bottom: 5%;
 	}
 	.mobile-img{
 		width: 100%;
 		box-shadow: 10px 10px 18px -8px rgba(0,0,0,1);
 		border: none;
+		height: 45%;
+		margin: 0;
 	}
 	.home-mobile2-img{
 		margin-left: 10%;
 		width: 80%;
+		margin-bottom: 0;
 	}
 	.mobile-content{
 		width: 100%;
     border: none;
-		margin-bottom: 40px;
     box-shadow: 10px 10px 18px -8px rgba(0,0,0,1);
+    height: 45%;
+    margin-bottom: 10%;
 	}
 	.mobile-content h1{
 		font-size: 30px;
@@ -184,17 +186,14 @@
   	color: red;
   }
 	.home-btns{
-		margin-top: 10%;
-		margin-bottom: 10px;
-/*		border: 2px solid red;*/
+		margin-top: 20%;
 	}
 	.home-btns .home-btn{
-		font-size: 20px;
+		font-size: 15px;
 		border: none;
 		background-color: white;
 		color: black;
 		font-weight: bolder;
-/*		border: 2px solid red;*/
     margin-bottom: -5px;
 	}
 	.home-btns .home-btnn{
@@ -205,11 +204,10 @@
 		border: none;
 	}
   .home-btns h3{
-  	font-size: 20px;
+  	font-size: 15px;
   	font-weight: bolder;
   	background-color: white;
-/*  	border: 2px solid red;*/
-  	margin-top: -2px;
+  	margin-top: -5px;
   }
   .home-btns h3::first-letter{
   	color: red;
