@@ -3,10 +3,12 @@
 	/*height: 100vh;*/
 }
 .buy-home-links{
-	text-align: center;
 	background-color: black;
 	height: 70px;
 	padding-top: 5px;
+	display: flex;
+/*	border: 2px solid red;*/
+	justify-content: center;
 }
 .buy-home-link{
 	text-decoration: none;
@@ -16,11 +18,16 @@
 	background-color: black;
 	padding: 0;
 }
+.buy-search{
+/*	border: 2px solid red;*/
+	margin-left: 60px;
+	margin-top: 15px;
+}
 .buy-index .buy-mobile{
-	/*border: 5px solid black;*/
+/*	border: 5px solid black;*/
 	margin: auto;
 	width: 90%;
-	/*height: 80%;*/
+/*	height: 80%;*/
 	display: flex;
 	margin-top: 2rem;
 }
@@ -39,7 +46,8 @@
 	background-color: springgreen;
 	margin: auto;
 	margin-top: 5%;
-	background-image: url(https://images.unsplash.com/photo-1589492477829-5e65395b66cc?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxzZWFyY2h8MTV8fG1vYmlsZSUyMHBob25lfGVufDB8fDB8fA%3D%3D&auto=format);
+/*	background-image: url(https://images.unsplash.com/photo-1589492477829-5e65395b66cc?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxzZWFyY2h8MTV8fG1vYmlsZSUyMHBob25lfGVufDB8fDB8fA%3D%3D&auto=format);*/
+	background-image: url(https://images.unsplash.com/photo-1607027340850-44448bd87dcb?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxzZWFyY2h8MjI3fHxtb2JpbGV8ZW58MHx8MHx8&auto=format&fit=crop&w=500&q=60);
 	background-repeat: no-repeat;
 	background-position: center;
 	background-size: cover;
@@ -103,10 +111,24 @@
 	.buy-home-links{
 		padding-top: 7px;
 		height: 50px;
+		justify-content: space-between;
+/*		border: 2px solid red;*/
+        padding-left: 10px;
+        padding-right: 10px;
 	}
 	.buy-home-link{
 		font-size: 20px;
 	}
+	.buy-search{
+	    margin-left: 0;
+	    margin-top: 0;
+    }
+    .buy-search-field{
+    	width: 120px;
+    }
+    .buy-search-submit{
+/*    	width: 20px;*/
+    }
 	.buy-index .buy-mobile{
 		border: none;
 		width: 100%;
@@ -120,9 +142,11 @@
 		height: 100%;
 	}
 	.buy-mobile .buy-card{
-		width: 100%;
-		height: 60%;
-		border: 2px solid black ;
+		width: 90%;
+		height: 500px;
+		height: 500px;
+        border: none;
+		box-shadow: 10px 10px 5px 0px rgba(0,0,0,0.75);
 		padding-bottom: 0;
 	}
 	.buy-mobile .buy-card .card-img{
@@ -131,7 +155,7 @@
 		width: 90%;
 		margin: auto;
 		margin-top: 10px;
-		height: 250px;
+		height: 300px;
 		background-position: center;
 		margin-bottom: 10px;
 	}

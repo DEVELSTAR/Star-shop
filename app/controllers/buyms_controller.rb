@@ -3,7 +3,9 @@ class BuymsController < ApplicationController
 
 	def index
 		# @buyms = Buym.all
-		@buyms = Buym.order(created_at: :desc)
+		@q = Buym.ransack(params[:q])
+		@buyms = @q.result(distinct: true)
+		# @buyms = Buym.order(created_at: :desc)
 	end
 
 	def show

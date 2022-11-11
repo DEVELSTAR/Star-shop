@@ -1,8 +1,19 @@
 <div class="buy-index">
   <div class="buy-home-links">
     <%=link_to 'IQBAL TELECOM', root_path, class: "buy-home-link" %>
+    <%= search_form_for @q, url: :buyms do |form| %>
+    <div class="form-group buy-search">
+      <%#= form.label :search_by_brand %>
+      <%= form.text_field :brand_or_title_cont, class: "buy-search-field" %>
+        <%= form.submit "search" , class: "buy-search-submit" %>
+    </div>
+    <% end %>
+
   </div>
   <div class="row row-cols-1 row-cols-md-2 g-4 buy-mobile">
+    <% if !@buyms.present? %>
+       <h1>OOPS! No Result Found</h1>
+    <% end %>
   	<% @buyms.each do |buy| %>
   	  <div class="col buy-col">
   	    <div class="card buy-card">
