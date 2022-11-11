@@ -98,7 +98,7 @@
     .show-mobile-img{
     	width: 100%;
     	height: 50%;
-    	/*border: 2px solid red;*/
+    	border: 2px solid black;
     	background-repeat: no-repeat;
 	    background-position: center;
 	    background-size: cover;
