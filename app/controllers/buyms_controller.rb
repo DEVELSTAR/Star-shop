@@ -2,7 +2,8 @@ class BuymsController < ApplicationController
     before_action :set_buym, only: [:show, :edit, :update, :destroy]
 
 	def index
-		@buyms = Buym.all
+		# @buyms = Buym.all
+		@buyms = Buym.order(created_at: :desc)
 	end
 
 	def show
