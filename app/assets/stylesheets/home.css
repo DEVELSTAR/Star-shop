@@ -136,10 +136,10 @@
 		height: 100vh;
 	}
 	.marquee{
-		height: 10%;
+		height: 8%;
 	}
 	.marquee h1{
-		padding-top: 10px;
+		padding-top: 5px;
 		font-size: 20px;
 	}
 	.home-intro{
@@ -166,21 +166,30 @@
 	}
 	.mobile-content h1{
 		font-size: 30px;
+		font-weight: bolder;
 	}
     .mobile-content h2{
 		font-size: 25px;
 	}
+	.mobile-content h1::first-letter{
+		color: red;
+	}
+	.mobile-content .ht{
+  	color: red;
+  }
 	.home-btns{
 		margin-top: 10%;
 	}
 	.home-btns .home-btn{
-		font-size: 15px;
+		font-size: 16px;
 		padding: 7px;
 		margin-bottom: 20px;
 		border: none;
 		border-radius: 10px;
 		background-color: white;
 		color: black;
+		color: red;
+		font-weight: bolder;
 	}
 
 	.contact-us{
