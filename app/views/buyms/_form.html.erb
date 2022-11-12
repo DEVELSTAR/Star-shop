@@ -1,12 +1,59 @@
-<%= form_with model: @buym do |form| %>
-  <strong>Title:</strong> <%= form.text_field :title %><br>
-  <strong>Brand:</strong> <%= form.text_field :brand %><br>
-  <strong>Price:</strong> <%= form.number_field :price %><br>
-  <strong>Ram:</strong> <%= form.text_field :ram %><br>
-  <strong>Storage:</strong> <%= form.text_field :storage %><br>
-  <strong>Delivery:</strong> <%= form.text_field :delivery %><br>
-  <strong>Description:</strong> <%= form.text_area :description %><br>
-  <%= form.hidden_field :user_id, :value => current_user.id %>
-  <%= form.submit %>
-<% end %>
-
+<div class="user-edit">
+    <div class="form-group row user-edit-avatar">
+      <div class="col-sm-3 col-form-label">
+        <img class="form-dummy-mobile" src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQpmV931xQLfC0GXleCbSOpk8mYEFEHmcmNAg&usqp=CAU">
+      </div>
+    </div>
+  <div class="user-edit-form">
+    <%= form_with model: @buym, local: true do |f| %>
+      <div class="form-group row">
+        <%= f.label :title, class: 'col-sm-1' %>
+        <div class="col-sm-9">
+          <%= f.text_field :title, class: 'form-control mb-2' %>
+        </div>
+      </div>
+      <div class="form-group row">
+        <%= f.label :brand, class: 'col-sm-1' %>
+        <div class="col-sm-9">
+          <%= f.text_field :brand, class: 'form-control mb-2' %>
+        </div>
+      </div>
+       <div class="form-group row">
+        <%= f.label :price, class: 'col-sm-1 ' %>
+        <div class="col-sm-9">
+          <%= f.number_field :price, class: 'form-control mb-2' %>
+        </div>
+      </div>
+      <div class="form-group row">
+        <%= f.label :ram, class: 'col-sm-1 ' %>
+        <div class="col-sm-9">
+          <%= f.text_field :ram, class: 'form-control mb-2' %>
+        </div>
+      </div>
+      <div class="form-group row">
+        <%= f.label :storage, class: 'col-sm-1 ' %>
+        <div class="col-sm-9">
+          <%= f.text_field :storage, class: 'form-control mb-2' %>
+        </div>
+      </div>
+      <div class="form-group row">
+        <%= f.label :delivery, class: 'col-sm-1 ' %>
+        <div class="col-sm-9">
+          <%= f.text_field :delivery, class: 'form-control mb-2' %>
+        </div>
+      </div>
+      <div class="form-group row">
+        <%= f.label :description, class: 'col-sm-1 ' %>
+        <div class="col-sm-9">
+          <%= f.text_area :description, class: 'form-control mb-2' %>
+        </div>
+      </div>
+      <%= f.hidden_field :user_id, :value => current_user.id %>
+      <div class="form-group row user-edit-submits">
+        <div class="col-sm-9">
+          <%= f.submit "Submit", class: 'user-edit-submit mb-2' %>
+        </div>
+      </div>
+    <% end %>
+  </div>
+</div>
