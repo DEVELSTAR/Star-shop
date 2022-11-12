@@ -1,1 +1,53 @@
-<a class="edit-profile" href="<%= edit_user_path(current_user) %>">edit Profile
+<div class="user-show">
+  <div class="user-show-avatar">
+    <img class="avatar" src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQUtMXQefIGs_mALe8o2DGLNTlA4uSal7cWGOT2PeI&s">
+  </div>
+  <div class="user-show-cont">
+    <h1><strong>Name: </strong><%= @user.name %></h1>
+    <h1><strong>Bio: </strong><%= @user.bio  %></h1>
+    <h1><strong>Phone: </strong><%= @user.phone %></h1>
+    <h1><strong>Email: </strong><%= @user.email %></h1>
+    <h1><strong>Address: </strong><%= @user.street %>, <%= @user.city %>, <%= @user.country %>.</h1>
+    <div class="user-show-btns">
+      <%= link_to "Edit Your Profile", edit_user_path(current_user), class: "user-edit-btn"  %>
+      <%= link_to "Back To Home", root_path , class: "user-back-btn" %>
+    </div>
+  </div>
+</div>
+<div class="user-show-title">
+  <h1>My Posts</h1>
+</div>
+<div class="buy-index user-show-buyms">
+  <div class="row row-cols-1 row-cols-md-2 g-4 buy-mobile">
+    <% if !current_user.buyms.present? %>
+      <h1>You don't have any post.</h1>
+      <div class="user-show-btns">
+        <%= link_to "Sell Old Phone ", new_buym_path, class: "user-back-btn" %>
+      </div>
+    <% end %>
+    <% current_user.buyms.each do |buy| %>
+      <div class="col buy-col">
+        <div class="card buy-card">
+          <div class="card-img">
+            <%#= image_tag "home-mobile2", class: "home-mobile2-img" %>
+          </div>
+          <div class="card-cont">
+            <div class="card-titles">
+              <%= link_to buy.title, buym_path(buy), class: "card-title" %> 
+              <%= buy.brand %>,
+              <%= buy.ram %>,
+              <%= buy.storage %>
+            </div>
+            <div>
+              <h1 class="card-price">Rs. <%= buy.price %>.00</h1>
+            </div>
+            <div class="card-btns">
+              <%= link_to "Add To Cart", buym_path(buy), class: "card-cart-btn" %>
+              <%= link_to "Buy now", buym_path(buy), class: "card-buy-btn" %>
+            </div>
+          </div>
+        </div>
+      </div>
+    <% end %>
+  </div>
+</div>
