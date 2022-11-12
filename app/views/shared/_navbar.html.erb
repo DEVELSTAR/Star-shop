@@ -1,0 +1,23 @@
+<div class="home-navbar">
+    <div class="marquee">
+      <h1>Welcome to Iqbal Telecom
+    </div>
+  <div class="dropdown ">
+    <i class="fa fa-user user-icon" data-bs-toggle="dropdown"></i>
+    <!-- <h1>Profile</h1> -->
+    <ul class="dropdown-menu">
+      <% if user_signed_in? %>  
+        <li>
+          <a href="<%= user_path(current_user) %>", class= "dropdown-item">Profile</a>
+        </li>
+        <li>
+        <%= link_to "Sign out", destroy_user_session_path, data: {turbo_method: :delete}, class: "dropdown-item"%>
+        </li>
+      <% else %>
+        <li>
+        <%= link_to "Sign up", new_user_session_path, class: "dropdown-item"%>
+        </li>
+      <% end %>
+    </ul>
+  </div>
+</div>

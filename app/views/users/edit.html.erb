@@ -1,0 +1,58 @@
+<div class="user-edit">
+    <div class="form-group row user-edit-avatar">
+      <div class="col-sm-3 col-form-label">
+        <img class="avatar" src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQUtMXQefIGs_mALe8o2DGLNTlA4uSal7cWGOT2PeI&s">
+      </div>
+    </div>
+	<div class="user-edit-form">
+	  <%= form_with model: current_user, local: true do |f| %>
+	    <div class="form-group row">
+	      <%= f.label :name, class: 'col-sm-1' %>
+	      <div class="col-sm-9">
+	        <%= f.text_field :name, class: 'form-control mb-2' %>
+	      </div>
+	    </div>
+	    <div class="form-group row">
+	      <%= f.label :phone, class: 'col-sm-1' %>
+	      <div class="col-sm-9">
+	        <%= f.telephone_field :phone, class: 'form-control mb-2' %>
+	      </div>
+	    </div>
+	     <div class="form-group row">
+	      <%= f.label :bio, class: 'col-sm-1 ' %>
+	      <div class="col-sm-9">
+	        <%= f.text_area :bio, class: 'form-control mb-2' %>
+	      </div>
+	    </div>
+	    <div class="form-group row">
+	      <%= f.label :street, class: 'col-sm-1 ' %>
+	      <div class="col-sm-9">
+	        <%= f.text_field :street, class: 'form-control mb-2' %>
+	      </div>
+	    </div>
+	    <div class="form-group row">
+	      <%= f.label :city, class: 'col-sm-1 ' %>
+	      <div class="col-sm-9">
+	        <%= f.text_field :city, class: 'form-control mb-2' %>
+	      </div>
+	    </div>
+	    <div class="form-group row">
+	      <%= f.label :country, class: 'col-sm-1 ' %>
+	      <div class="col-sm-9">
+	        <%= f.text_field :country, class: 'form-control mb-2' %>
+	      </div>
+	    </div>
+	    <div class="form-group row">
+	      <%= f.label :email, class: 'col-sm-1 ' %>
+	      <div class="col-sm-9">
+	        <%= f.text_field :email, class: 'form-control mb-2' %>
+	      </div>
+	    </div>
+	    <div class="form-group row user-edit-submits">
+	      <div class="col-sm-9">
+	        <%= f.submit "Submit", class: 'user-edit-submit mb-2' %>
+	      </div>
+	    </div>
+	  <% end %>
+	</div>
+</div>
