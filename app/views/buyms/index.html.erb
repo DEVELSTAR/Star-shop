@@ -31,7 +31,7 @@
       	  	  <h1 class="card-price">Rs. <%= buy.price %>.00</h1>
             </div>
             <div class="card-btns">
-              <%= link_to "Add To Cart", buym_path(buy), class: "card-cart-btn" %>
+              <%= link_to "Add To Cart", carts_show_path(buy), class: "card-cart-btn" %>
         	    <%= link_to "Buy now", buym_path(buy), class: "card-buy-btn" %>
             </div>
           </div>
