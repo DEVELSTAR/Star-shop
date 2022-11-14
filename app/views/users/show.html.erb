@@ -41,9 +41,9 @@
             <div>
               <h1 class="card-price">Rs. <%= buy.price %>.00</h1>
             </div>
-            <div class="card-btns">
-              <%= link_to "Add To Cart", buym_path(buy), class: "card-cart-btn" %>
-              <%= link_to "Buy now", buym_path(buy), class: "card-buy-btn" %>
+            <div class="user-card-btns">
+              <%= link_to "Edit", edit_buym_path(buy), class: "user-show-edit-btn" %>
+              <%= link_to "Delete", buym_path(buy), data: {turbo_method: :delete}, class: "user-show-delete-btn" %>
             </div>
           </div>
         </div>

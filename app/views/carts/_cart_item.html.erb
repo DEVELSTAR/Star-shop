@@ -5,12 +5,12 @@
 		<div class="cart-img"></div>
 		<div class="cart-cont">
 			<h2><%= item.buym.title %></h2>
-			<h3>Price: 29999.00</h3>
-			<h3>Deliver by Thu Nov 17</h3>
+			<h3>Price: <%= item.buym.price %></h3>
+			<h3>Deliver by <%= item.buym.delivery  %></h3>
 			<div class="cart-cont-btns">
 				<h3>Save for later</h3>
-				<h3><%= link_to "Remove", item, data: {turbo_method: :delete} %></h3>
-				<h3>Buy this now</h3>
+				<h3>Buy now</h3>
+				<h3><%= link_to "Remove", item, data: {turbo_method: :delete}, class: "cart-remove-btn" %></h3>
 			</div>
 		</div>
 	</div>
@@ -21,3 +21,4 @@
 		<h3>Place order</h3>
 	</div>
 </div>
+<%= link_to "Back", buyms_path  %>

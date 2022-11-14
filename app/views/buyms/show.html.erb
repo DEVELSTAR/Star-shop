@@ -1,9 +1,6 @@
 <%#= @buym.title %>
 <%#= link_to "delete", buym_path(@buym), data: {turbo_method: :delete}  %>
 <%#= link_to "edit", edit_buym_path(@buym) %>
-
-
-
 <div class="buym-show">
 	<div class="buy-home-links buym-show-links">
       <%=link_to 'IQBAL TELECOM', root_path, class: "buy-home-link" %>
@@ -30,8 +27,13 @@
 
 			</div>
             <div class="show-btns">
-              <%= link_to "Add To Cart", buym_path(@buym), class: "show-cart-btn" %>
-        	  <%= link_to "Buy now", buym_path(@buym), class: "show-buy-btn" %>
+            	<% if @buym.user != current_user %>
+                  <%= link_to "Add To Cart", buym_path(@buym), class: "show-cart-btn" %>
+        	      <%= link_to "Buy now", buym_path(@buym), class: "show-buy-btn" %>
+        	    <% else %>
+                  <%= link_to "Edit", edit_buym_path(@buym), class: "show-edit-btn" %>
+        	      <%= link_to "Delete", buym_path(@buym), data: {turbo_method: :delete}, class: "show-delete-btn" %>
+              <% end %>
             </div>
 		</div>
 	</div>
