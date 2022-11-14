@@ -24,6 +24,15 @@
 	width: 70%;
 	padding-left: 2%;
 	padding-top: 2%;
+}	
+.cart-cont-btns h3:last-child{
+	background-color: red;
+	border: none;
+	padding-top: 4px;
+}
+.cart-remove-btn{
+	text-decoration: none;
+	color: white;
 }
 .cart-cont-btns{
 	display: flex;
