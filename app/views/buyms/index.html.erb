@@ -33,18 +33,19 @@
       	  	  <h1 class="card-price">Rs. <%= buym.price %>.00</h1>
             </div>
             <div class="card-btns">
-              <% if user_signed_in? %>
-                <% if buym.user == current_user %>
-                  <%= link_to "Edit", edit_buym_path(buym), class: "card-edit-btn" %>
-                  <%= link_to "Delete", buym_path(buym), data: {turbo_method: :delete}, class: "card-delete-btn" %>
-                <% else %>
+              <% if buym.user == current_user %>
+                <%= link_to "Edit", edit_buym_path(buym), class: "card-edit-btn" %>
+                <%= link_to "Delete", buym_path(buym), data: {turbo_method: :delete}, class: "card-delete-btn" %>
+              <% elsif !user_signed_in? %>
+                  <%= link_to "Add to cart", new_user_session_path, class: "card-cart-btn" %>
+                  <%= link_to "Buy now", buym_path(buym), class: "card-buy-btn" %>
+              <% else %>
                   <%= form_for(@order_item, remote: true) do |f| %>
                     <%= f.hidden_field :buym_id, value: buym.id %>
-                    <%= f.hidden_field :user_id, value: @user.id %>
+                    <%= f.hidden_field :user_id, value: @user.id if user_signed_in? %>
                     <%= f.submit "Add to cart", class: 'card-cart-btn' %>
                   <% end %>
-                  <%= link_to "Buy now", buym_path(buym), class: "card-buy-btn" %>
-                <% end %>
+                <%= link_to "Buy now", buym_path(buym), class: "card-buy-btn" %>
               <% end %>
             </div>
           </div>

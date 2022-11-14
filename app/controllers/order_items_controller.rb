@@ -1,6 +1,6 @@
 class OrderItemsController < ApplicationController
     before_action :authenticate_user!
-
+    
 	def create
 		@order = current_user 
 		@order = current_order
