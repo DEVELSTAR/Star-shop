@@ -14,7 +14,7 @@
     <% if !@buyms.present? %>
        <h1>OOPS! No Result Found</h1>
     <% end %>
-  	<% @buyms.each do |buy| %>
+  	<% @buyms.each do |buym| %>
   	  <div class="col buy-col">
   	    <div class="card buy-card">
   		    <div class="card-img">
@@ -22,21 +22,31 @@
           </div>
           <div class="card-cont">
       	  	<div class="card-titles">
-              <%= link_to buy.title, buym_path(buy), class: "card-title" %> 
-      	  	  <%= buy.brand %>,
-      	  	  <%= buy.ram %>,
-      	  	  <%= buy.storage %>
+              <%= link_to buym.title, buym_path(buym), class: "card-title" %> 
+      	  	  <%= buym.brand %>,
+      	  	  <%= buym.ram %>,
+      	  	  <%= buym.storage %>
             </div>
             <div>
-      	  	  <h1 class="card-price">Rs. <%= buy.price %>.00</h1>
+      	  	  <h1 class="card-price">Rs. <%= buym.price %>.00</h1>
             </div>
             <div class="card-btns">
-              <%= link_to "Add To Cart", carts_show_path(buy), class: "card-cart-btn" %>
-        	    <%= link_to "Buy now", buym_path(buy), class: "card-buy-btn" %>
+            <% if user_signed_in? %>
+              <%= form_for(@order_item, remote: true) do |f| %>
+                <%= f.hidden_field :buym_id, value: buym.id %>
+                <%= f.hidden_field :user_id, value: @user.id %>
+                <%= f.submit "Add to cart", class: 'card-cart-btn' %>
+              <% end %>
+            <% end %>
+
+        	    <%= link_to "Buy now", buym_path(buym), class: "card-buy-btn" %>
             </div>
           </div>
         </div>
       </div>
 	  <% end %>
   </div>
+</div>
+<div class="card-btns">
+  <%= link_to "Go To Cart", carts_show_path, class: "card-cart-btn" %>
 </div>

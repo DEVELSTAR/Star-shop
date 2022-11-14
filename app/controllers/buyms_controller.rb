@@ -1,11 +1,14 @@
 class BuymsController < ApplicationController
+    before_action :authenticate_user!, except: [:index]
     before_action :set_buym, only: [:show, :edit, :update, :destroy]
 
 	def index
 		# @buyms = Buym.all
+		@user = current_user
 		@q = Buym.ransack(params[:q])
 		@buyms = @q.result(distinct: true)
 		# @buyms = Buym.order(created_at: :desc)
+  	@order_item = current_order.order_items.new
 	end
 
 	def show
