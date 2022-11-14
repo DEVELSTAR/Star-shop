@@ -1,24 +1,29 @@
+<% if @order_items.present? %>
 <%= link_to "Back", buyms_path  %>
-<div class="carts-show">
-	<%# if @order_items.size>0 %>
-	<% @order_items.each do |item| %>				
-	<div class="cart">
-		<div class="cart-img"></div>
-		<div class="cart-cont">
-			<h2><%= item.buym.title %></h2>
-			<h3>Price: <%= item.buym.price %></h3>
-			<h3>Deliver by <%= item.buym.delivery  %></h3>
-			<div class="cart-cont-btns">
-				<h3>Save for later</h3>
-				<h3>Buy now</h3>
-				<h3><%= link_to "Remove", item, data: {turbo_method: :delete}, class: "cart-remove-btn" %></h3>
+	<div class="carts-show">
+		<% @order_items.each do |item| %>				
+		<div class="cart">
+			<div class="cart-img"></div>
+			<div class="cart-cont">
+				<h2><%= item.buym.title %></h2>
+				<h3>Price: <%= item.buym.price %></h3>
+				<h3>Deliver by <%= item.buym.delivery  %></h3>
+				<div class="cart-cont-btns">
+					<h3>Save for later</h3>
+					<h3>Buy now</h3>
+					<h3><%= link_to "Remove", item, data: {turbo_method: :delete}, class: "cart-remove-btn" %></h3>
+				</div>
 			</div>
 		</div>
+		<% end %>	
+		<div class="cart-btns">
+			<h3>Total: 29999.00</h3>
+			<h3>Place order</h3>
+		</div>
 	</div>
-	<% end %>	
-	<%# end %>
-	<div class="cart-btns">
-		<h3>Total: 29999.00</h3>
-		<h3>Place order</h3>
-	</div>
-</div>
+<% else %>
+	<div class="carts-show">
+		<h1>There is nothing in your cart.</h1>
+    </div>
+    <%= link_to "Back", buyms_path  %>
+<% end %>
