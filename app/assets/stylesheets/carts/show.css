@@ -1,11 +1,25 @@
 .carts-show{
 	border: 5px solid black;
-	width: 70%;
+	width: 80%;
 	margin: auto;
-	margin-top: 5%;
+	margin-top: 2%;
+	margin-bottom: 2%;
+}
+.cart-backs{
+	padding-top: 2%;
+}
+.cart-back{
+	text-decoration: none;
+	color: white;
+	font-size: 50px;
+	padding: 5px 45px;
+	margin-left: 270px;
+	margin-left: 10%;
+	background-color: black;
+	border-radius: 8px;
 }
 .cart{
-	width: 80%;
+	width: 90%;
 	margin: auto;
 	margin-top: 4%;
 	margin-bottom: 4%;
@@ -61,6 +75,18 @@
 @media only screen and (max-width: 480px) {
 	.carts-show{
 		width: 90%;
+	}
+	.cart-backs{
+		padding-top: 1%;
+	}
+	.cart-back{
+		text-decoration: none;
+		color: white;
+		font-size: 30px;
+        padding: 5px 50px;
+		margin-left: 5%;
+		background-color: black;
+		border-radius: 8px;
 	}
 	.cart{
 		width: 95%;

@@ -1,5 +1,7 @@
+<div class="cart-backs">
+  <%= link_to "Back", buyms_path, class: "cart-back"  %>
+</div>
 <% if @order_items.present? %>
-<%= link_to "Back", buyms_path  %>
 	<div class="carts-show">
 		<% @order_items.each do |item| %>				
 		<div class="cart">
@@ -17,7 +19,12 @@
 		</div>
 		<% end %>	
 		<div class="cart-btns">
-			<h3>Total: 29999.00</h3>
+			<% t = 0 %>
+			<h3>Total: <% @order_items.each do |o| %>
+						  <% t = t + o.unit_price %>
+				       <% end %>
+				       <%= t %>
+			</h3>
 			<h3>Place order</h3>
 		</div>
 	</div>
@@ -25,5 +32,4 @@
 	<div class="carts-show">
 		<h1>There is nothing in your cart.</h1>
     </div>
-    <%= link_to "Back", buyms_path  %>
 <% end %>
