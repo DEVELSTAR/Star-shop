@@ -29,7 +29,7 @@
             <div class="show-btns">
             	<% if @buym.user != current_user %>
                   <%= link_to "Add To Cart", buym_path(@buym), class: "show-cart-btn" %>
-        	      <%= link_to "Buy now", buym_path(@buym), class: "show-buy-btn" %>
+        	      <%= phone_to "9012626767", "Buy now", class: "show-buy-btn" %>
         	    <% else %>
                   <%= link_to "Edit", edit_buym_path(@buym), class: "show-edit-btn" %>
         	      <%= link_to "Delete", buym_path(@buym), data: {turbo_method: :delete}, class: "show-delete-btn" %>

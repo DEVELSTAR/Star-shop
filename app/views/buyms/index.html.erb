@@ -39,14 +39,14 @@
                 <%= link_to "Delete", buym_path(buym), data: {turbo_method: :delete}, class: "card-delete-btn" %>
               <% elsif !user_signed_in? %>
                   <%= link_to "Add to cart", new_user_session_path, class: "card-cart-btn" %>
-                  <%= link_to "Buy now", buym_path(buym), class: "card-buy-btn" %>
+                  <%= phone_to "9012626767", "Buy now", class: "card-buy-btn" %>
               <% else %>
                   <%= form_for(@order_item, remote: true) do |f| %>
                     <%= f.hidden_field :buym_id, value: buym.id %>
                     <%= f.hidden_field :user_id, value: @user.id if user_signed_in? %>
                     <%= f.submit "Add to cart", class: 'card-cart-btn' %>
                   <% end %>
-                <%= link_to "Buy now", buym_path(buym), class: "card-buy-btn" %>
+                  <%= phone_to "9012626767", "Buy now", class: "card-buy-btn" %>
               <% end %>
             </div>
           </div>
