@@ -6,4 +6,5 @@ class User < ApplicationRecord
 
   has_many :buyms, dependent: :destroy
   has_many :order_items, dependent: :destroy
+  has_many :comments, dependent: :destroy
 end

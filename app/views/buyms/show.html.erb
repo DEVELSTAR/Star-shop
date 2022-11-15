@@ -1,6 +1,3 @@
-<%#= @buym.title %>
-<%#= link_to "delete", buym_path(@buym), data: {turbo_method: :delete}  %>
-<%#= link_to "edit", edit_buym_path(@buym) %>
 <div class="buym-show">
 	<div class="buy-home-links buym-show-links">
       <%=link_to 'IQBAL TELECOM', root_path, class: "buy-home-link" %>
@@ -37,4 +34,14 @@
             </div>
 		</div>
 	</div>
+</div>
+
+<div class="buym-comments">
+	<% if @buym.comments.present? %>
+	  <h2>Question</h2>
+	  <%= render @buym.comments %>
+  <% end %>
+  
+  <h2>Make a deal</h2>
+  <%= render 'comments/form' %>
 </div>

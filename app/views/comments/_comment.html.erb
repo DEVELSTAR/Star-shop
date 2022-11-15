@@ -1,0 +1,12 @@
+<div class="buym-comments-show">
+	<% if comment.user.name.present? %>
+	  <strong><%= comment.user.name %></strong><br>
+	<% else %>
+	  <strong><%= comment.user.email %></strong><br>
+	<% end %>
+	<%= comment.body %><br>
+
+	<% if comment.user == current_user %>
+	   <%= link_to "delete", [comment.buym, comment], data: {turbo_method: :delete} , class: "delete-comment" %>
+	<% end %>
+</div>

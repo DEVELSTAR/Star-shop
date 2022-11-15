@@ -1,0 +1,7 @@
+<div class="buym-comments-form">
+	<%= form_with model: [ @buym, @buym.comments.build ] do |form| %>
+	  <%= form.hidden_field :user_id, :value => current_user.id if user_signed_in? %>
+	    <%= form.text_field :body %>
+	    <%= form.submit "Create", class: "submit-comments" %>
+	<% end %>
+</div>
