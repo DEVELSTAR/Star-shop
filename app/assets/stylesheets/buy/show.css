@@ -193,3 +193,11 @@
     	margin-top: 5px;
     }
 }
+@media only screen and (max-height: 500px) {
+	.show-mobile-img{
+		display: none;
+	}
+	.buym-show-mobile{
+		border: none;
+	}
+}
